@@ -35,6 +35,13 @@ body {
   box-shadow: inset 0 0 0 1px green;
 }
 
+.topics-archive .section .image:before {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .topics-archive .section img {
   width: 100%;
   height: calc(100vh - var(--padding) * 2);
