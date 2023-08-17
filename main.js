@@ -90,10 +90,7 @@ gsap
     scrollTrigger: {
       trigger: '.topics-archive',
       start: 'top top',
-      end: () =>
-        `${window.innerHeight * allTopics.length} bottom-=${
-          window.innerHeight * 0.2
-        } `,
+      end: () => `${window.innerHeight * allTopics.length} bottom`,
       markers: true,
       scrub: 2,
       pin: true,
