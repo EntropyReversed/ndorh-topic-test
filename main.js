@@ -78,7 +78,7 @@ allTopics.forEach((_, index) => {
   }
   timeline
     .to(allCards[index + 1], { opacity: 1 }, index === 0 ? '<' : '+=0')
-    .to({}, { duration: 0.2 });
+    .to({}, { duration: 0.1 });
 
   if (index !== allTopics.length - 2) {
     timeline.to(allCards[index + 1], { opacity: 0 });
