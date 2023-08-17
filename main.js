@@ -57,10 +57,10 @@ allTopics.forEach((_, index) => {
       .to(
         allPixels[index + 1],
         {
-          '--xPos': `${cardBoundingBox.x}px`,
-          '--yPos': `${cardBoundingBox.y}px`,
-          '--width': `${cardBoundingBox.width}px`,
-          '--height': `${cardBoundingBox.height}px`,
+          '--xPos': `${allCards[index + 1].getBoundingClientRect().x}px`,
+          '--yPos': `${allCards[index + 1].getBoundingClientRect().y}px`,
+          '--width': `${allCards[index + 1].getBoundingClientRect().width}px`,
+          '--height': `${allCards[index + 1].getBoundingClientRect().height}px`,
         },
         '<'
       )
@@ -90,7 +90,10 @@ gsap
     scrollTrigger: {
       trigger: '.topics-archive',
       start: 'top top',
-      end: () => `${window.innerHeight * allTopics.length} bottom`,
+      end: () =>
+        `${window.innerHeight * allTopics.length} bottom-=${
+          window.innerHeight * 0.2
+        } `,
       markers: true,
       scrub: 2,
       pin: true,

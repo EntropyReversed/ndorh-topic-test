@@ -50,7 +50,7 @@ body {
 }
 
 .card {
-  background-color: var(--color);
+  /* background-color: var(--color); */
   /* border-radius: 8px; */
   max-width: 70%;
   opacity: 0;
@@ -85,11 +85,28 @@ body {
 .pixel {
   --width: 100px;
   --height: 100px;
+  --scaleX: 1;
+  --scaleY: 1;
   position: absolute;
   top: var(--yPos);
   left: var(--xPos);
   width: var(--width);
   height: var(--height);
+  transform: scale(var(--scaleX), var(--scaleY));
   background-color: var(--color);
   /* border-radius: 8px; */
+}
+
+.pixel .title {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: calc(var(--width));
+  height: auto;
+  z-index: 10;
+}
+
+.pixel .title svg {
+  width: 100%;
+  height: auto;
 }
